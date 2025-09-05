@@ -18,9 +18,9 @@
     <StackPanel Margin="42,16,42,12">
         <ui:TextBlock Margin="0,0,0,8"
                       FontTypography="BodyStrong"
-                      Text="通知设置" />
+                      Text="NotificationsSettings" />
 
-        <!--  全局通知设置  -->
+        <!--  Global Notification Settings  -->
         <ui:CardExpander Margin="0,0,0,12"
                          ContentPadding="0"
                          Icon="{ui:SymbolIcon Alert24}">
@@ -37,12 +37,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="全局通知设置"
+                                  Text="Global Notification Settings"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="影响下方所有通知的设置"
+                                  Text="Affect All Below Notification Settings"
                                   TextWrapping="Wrap" />
                     <!--<ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -64,12 +64,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="通知时包含截图"
+                                  Text="Notifications Include Screenshot"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="总是在通知中包含截图"
+                                  Text="Always Include Screenshot in Notifications"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -89,12 +89,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="是否允许 JS 通知"
+                                  Text="Allow JS Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="开启时允许 JS 脚本发送通知"
+                                  Text="Allow JS Script to Send Notifications when enabled"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -114,12 +114,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="需要通知的事件"
+                                  Text="Events requiring Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="英文逗号分割，为空为全部通知"
+                                  Text="Comma-Separated; Leave Blank for All Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -149,12 +149,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用 Webhook"
+                                  Text="Enable Webhook"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="Webhook 相关设置"
+                                  Text="Webhook Settings"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -176,12 +176,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="Webhook 端点"
+                                  Text="Webhook Endpoint"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写 Webhook 端点"
+                                  Text="Fill Webhook Endpoint"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -204,12 +204,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="发送对象"
+                                  Text="Send Target"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写发送对象"
+                                  Text="填写Send Target"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -232,12 +232,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试"
+                                  Text="Test"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试载荷"
+                                  Text="Send Test Payload"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.Column="1"
@@ -245,7 +245,7 @@
                                Margin="0,0,36,0"
                                HorizontalAlignment="Right"
                                Command="{Binding TestWebhookCommand}"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>
@@ -266,12 +266,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用 WebSocket"
+                                  Text="Enable WebSocket"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="WebSocket 相关设置"
+                                  Text="WebSocket Settings"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -293,12 +293,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="WebSocket 端点"
+                                  Text="WebSocket Endpoint"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写 WebSocket 端点"
+                                  Text="Fill WebSocket Endpoint"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -321,24 +321,24 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试 WebSocket 通知"
+                                  Text="Test WebSocket Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试通知"
+                                  Text="SendTestNotifications"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.RowSpan="2"
                                Grid.Column="1"
                                Margin="0,0,36,0"
                                Command="{Binding TestWebSocketNotificationCommand}"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>
 
-        <!-- Windows 通知 -->
+        <!-- Windows Notifications -->
         <ui:CardExpander Margin="0,0,0,12"
                          ContentPadding="0"
                          Icon="{ui:SymbolIcon Alert28}">
@@ -355,12 +355,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用 Windows 通知"
+                                  Text="Enable Windows Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="Windows 通知别与游戏界面重叠，否则易误点通知"
+                                  Text="Avoid Windows Notifications Overlapping Game Window"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -382,24 +382,24 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试 Windows 通知"
+                                  Text="Test Windows Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试通知"
+                                  Text="SendTestNotifications"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.RowSpan="2"
                                Grid.Column="1"
                                Margin="0,0,36,0"
                                Command="{Binding TestWindowsUwpNotificationCommand}"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>
 
-        <!-- 飞书通知 -->
+        <!-- 飞书Notifications -->
         <ui:CardExpander Margin="0,0,0,12"
                          ContentPadding="0"
                          Icon="{ui:SymbolIcon Send20}">
@@ -416,12 +416,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用飞书通知"
+                                  Text="Enable Feishu Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="飞书通知相关设置"
+                                  Text="Feishu Notification Settings"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -443,12 +443,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="飞书通知地址"
+                                  Text="Feishu Notification URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写飞书通知地址"
+                                  Text="Fill Feishu Notification URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -471,12 +471,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="飞书AppId"
+                                  Text="Feishu AppId"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="若填写AppId、AppSecret则发送图片"
+                                  Text="Send Images if AppId/AppSecret filled"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -499,12 +499,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="飞书AppSecret"
+                                  Text="Feishu AppSecret"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="若填写AppId、AppSecret则发送图片"
+                                  Text="Send Images if AppId/AppSecret filled"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -527,24 +527,24 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试飞书通知"
+                                  Text="Test Feishu Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试通知"
+                                  Text="SendTestNotifications"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.RowSpan="2"
                                Grid.Column="1"
                                Margin="0,0,36,0"
                                Command="{Binding TestFeishuNotificationCommand}"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>
 
-        <!-- OneBot 通知 -->
+        <!-- OneBot Notifications -->
         <ui:CardExpander Margin="0,0,0,12"
                          ContentPadding="0"
                          Icon="{ui:SymbolIcon Bot24}">
@@ -561,12 +561,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用 OneBot 通知"
+                                  Text="Enable OneBot Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="OneBot 通知相关设置"
+                                  Text="OneBot Notification Settings"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -588,12 +588,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="OneBot 请求地址"
+                                  Text="OneBot Request URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写 OneBot 请求地址"
+                                  Text="Fill OneBot Request URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -616,12 +616,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="QQ 号"
+                                  Text="QQ Number"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写接收消息的 QQ 号"
+                                  Text="Fill QQ Number to receive messages"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -644,12 +644,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="群号"
+                                  Text="Group Number"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写接收消息的群号"
+                                  Text="Fill Group ID for Messages"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -677,7 +677,7 @@
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写 OneBot Token（可选）"
+                                  Text="Fill OneBot Token (Optional)"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -700,24 +700,24 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试 OneBot 通知"
+                                  Text="Test OneBot Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试通知"
+                                  Text="SendTestNotifications"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.RowSpan="2"
                                Grid.Column="1"
                                Margin="0,0,36,0"
                                Command="{Binding TestOneBotNotificationCommand}"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>
 
-        <!-- 企业微信通知 -->
+        <!-- 企业微信Notifications -->
         <ui:CardExpander Margin="0,0,0,12"
                          ContentPadding="0"
                          Icon="{ui:SymbolIcon ChatMultiple24}">
@@ -734,12 +734,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用企业微信通知"
+                                  Text="Enable WeCom Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="企业微信通知相关设置"
+                                  Text="WeCom Notification Settings"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -761,12 +761,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="企业微信通知地址"
+                                  Text="WeCom Notification URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写企业微信通知地址"
+                                  Text="Fill WeCom Notification URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -789,24 +789,24 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试企业微信通知"
+                                  Text="Test Enterprise WeChat Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试通知"
+                                  Text="SendTestNotifications"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.RowSpan="2"
                                Grid.Column="1"
                                Margin="0,0,36,0"
                                Command="{Binding TestWorkWeixinNotificationCommand}"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>
 
-        <!--  Email通知  -->
+        <!--  EmailNotifications  -->
         <ui:CardExpander Margin="0,0,0,12"
                          ContentPadding="0"
                          Icon="{ui:SymbolIcon 	ChatMail20}">
@@ -823,12 +823,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用邮箱通知"
+                                  Text="Enable Email Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="邮箱相关设置（账号密码完全保存于本地）"
+                                  Text="Email Settings (account/password saved locally)"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -850,12 +850,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="SMTP 服务器"
+                                  Text="SMTP Server"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写 SMTP 服务器"
+                                  Text="Fill SMTP Server"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -878,12 +878,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="SMTP 服务器端口"
+                                  Text="SMTP Server Port"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写 SMTP 服务器端口，一般为：587"
+                                  Text="Fill SMTP Server Port，一般为：587"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -907,12 +907,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="SMTP 用户名"
+                                  Text="SMTP Username"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写 SMTP 用户名"
+                                  Text="Fill SMTP Username"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -935,12 +935,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="SMTP 密码"
+                                  Text="SMTP Password"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写 SMTP 密码"
+                                  Text="Fill SMTP Password"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -963,12 +963,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="发件人邮箱"
+                                  Text="Sender Email"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写发件人邮箱"
+                                  Text="Fill Sender Email"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -991,12 +991,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="发件人姓名"
+                                  Text="Sender Name"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写发件人姓名"
+                                  Text="Fill Sender Name"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1019,12 +1019,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="收件人邮箱"
+                                  Text="Recipient Email"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写收件人邮箱"
+                                  Text="Fill Recipient Email"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1047,23 +1047,23 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试邮箱通知"
+                                  Text="Test Email Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试通知"
+                                  Text="SendTestNotifications"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.RowSpan="2"
                                Grid.Column="1"
                                Margin="0,0,36,0"
                                Command="{Binding TestEmailNotificationCommand}"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>
-        <!--  Bark通知  -->
+        <!--  BarkNotifications  -->
         <ui:CardExpander Margin="0,0,0,12"
                          ContentPadding="0"
                          Icon="{ui:SymbolIcon CommentArrowRight24}">
@@ -1080,12 +1080,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用 Bark 通知"
+                                  Text="Enable Bark Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="Bark ios 推送通知"
+                                  Text="Bark iOS Push Notification"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -1107,12 +1107,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="Bark API 端点"
+                                  Text="Bark API Endpoint"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写 Bark API 端点,例如：api.day.app"
+                                  Text="Fill Bark API Endpoint, e.g., api.day.app"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1136,12 +1136,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="设备 Key"
+                                  Text="Device Key"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="多个设备使用英文逗号、分号或空格分隔"
+                                  Text="Separate Multiple Devices with Comma, Semicolon, or Space"
                                   TextWrapping="Wrap" />
 
                     <ui:TextBox Grid.Row="0"
@@ -1167,12 +1167,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="推送级别"
+                                  Text="Push Level"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="修改推送级别"
+                                  Text="Edit Push Level"
                                   TextWrapping="Wrap" />
                     <ComboBox Grid.Row="0"
                               Grid.RowSpan="2"
@@ -1181,10 +1181,10 @@
                               SelectedValuePath="Tag"
                               Margin="0,0,36,0"
                               MinWidth="120">
-                        <ComboBoxItem Content="passive（通知但不提醒）" Tag="passive" />
-                        <ComboBoxItem Content="critical（重要通知）" Tag="critical" />
-                        <ComboBoxItem Content="active（默认通知）" Tag="active" />
-                        <ComboBoxItem Content="sensitive（专注通知）" Tag="timeSensitive" />
+                        <ComboBoxItem Content="passive (notify without alert)" Tag="passive" />
+                        <ComboBoxItem Content="critical (important notification)" Tag="critical" />
+                        <ComboBoxItem Content="active (default notification)" Tag="active" />
+                        <ComboBoxItem Content="sensitive (focus notification)" Tag="timeSensitive" />
                     </ComboBox>
                 </Grid>
 
@@ -1200,12 +1200,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="通知声音"
+                                  Text="Notifications Sound"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="选择通知声音"
+                                  Text="Select Notification Sound"
                                   TextWrapping="Wrap" />
                     <ComboBox Grid.Row="0"
                               Grid.RowSpan="2"
@@ -1232,12 +1232,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="通知图标"
+                                  Text="Notifications Icon"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="自定义通知图标"
+                                  Text="Custom Notification Icon"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1261,12 +1261,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="通知分组"
+                                  Text="Notifications Group"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="按组显示在通知中心"
+                                  Text="Show by Group in Notification Center"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1290,12 +1290,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="保存推送历史"
+                                  Text="Save Push History"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="选择是否保存推送历史"
+                                  Text="选择YesNoSave Push History"
                                   TextWrapping="Wrap" />
                     <ComboBox Grid.Row="0"
                               Grid.RowSpan="2"
@@ -1305,8 +1305,8 @@
                               Margin="0,0,36,0"
                               SelectedValue="{Binding Config.NotificationConfig.BarkIsArchive, Mode=TwoWay}"
                               SelectedValuePath="Tag">
-                        <ComboBoxItem Content="是" Tag="1" />
-                        <ComboBoxItem Content="否" Tag="0" />
+                        <ComboBoxItem Content="Yes" Tag="1" />
+                        <ComboBoxItem Content="No" Tag="0" />
                     </ComboBox>
                 </Grid>
                 <Grid Margin="16">
@@ -1321,12 +1321,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="加密密钥"
+                                  Text="Encryption Key"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="推送内容加密密钥"
+                                  Text="Push Content Encryption Key"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1337,7 +1337,7 @@
                                 Text="{Binding Config.NotificationConfig.BarkCiphertext, Mode=TwoWay}"
                                 TextWrapping="NoWrap" />
                 </Grid>
-                <!-- 测试按钮 -->
+                <!-- Test按钮 -->
                 <Grid Margin="16">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -1350,23 +1350,23 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试 Bark 通知"
+                                  Text="Test Bark Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试通知"
+                                  Text="SendTestNotifications"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.RowSpan="2"
                                Grid.Column="1"
                                Margin="0,0,36,0"
                                Command="{Binding TestBarkNotificationCommand}"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>
-        <!--  Telegram通知  -->
+        <!--  TelegramNotifications  -->
         <ui:CardExpander Margin="0,0,0,12"
                          ContentPadding="0"
                          Icon="{ui:SymbolIcon Bot24}">
@@ -1383,12 +1383,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用 Telegram 通知"
+                                  Text="Enable Telegram Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="Telegram 机器人相关设置"
+                                  Text="Telegram Bot Settings"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -1410,12 +1410,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="机器人 Token"
+                                  Text="Bot Token"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写 Telegram 机器人的 Token"
+                                  Text="Fill Telegram Bot Token"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1439,12 +1439,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="聊天 ID"
+                                  Text="Chat ID"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写接收消息的聊天 ID"
+                                  Text="Fill Chat ID for Messages"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1468,12 +1468,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="API 基础 URL（可选）"
+                                  Text="API Base URL (Optional)"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="留空使用官方 API，或填写第三方 API 地址"
+                                  Text="Leave Blank to Use Official API, or Enter Third-Party API URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1497,12 +1497,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用代理"
+                                  Text="Enable Proxy"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="是否启用代理连接"
+                                  Text="Enable Proxy Connection"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -1523,12 +1523,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="代理地址"
+                                  Text="Proxy Address"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="格式：http://127.0.0.1:7890"
+                                  Text="Format: http://127.0.0.1:7890"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1540,7 +1540,7 @@
                                 TextWrapping="NoWrap" />
                 </Grid>
 
-                <!-- 测试按钮 -->
+                <!-- Test按钮 -->
                 <Grid Margin="16">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -1553,23 +1553,23 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试 Telegram 通知"
+                                  Text="Test Telegram Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试通知"
+                                  Text="SendTestNotifications"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.RowSpan="2"
                                Grid.Column="1"
                                Margin="0,0,36,0"
                                Command="{Binding TestTelegramNotificationCommand}"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>
-        <!--  xxtui 信息推送通知  -->
+        <!--  xxtui 信息推送Notifications  -->
         <ui:CardExpander Margin="0,0,0,12"
                          ContentPadding="0"
                          Icon="{ui:SymbolIcon Chat24}">
@@ -1586,12 +1586,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用 xxtui 信息推送"
+                                  Text="Enable xxtui Push Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="xxtui 信息推送通知相关设置"
+                                  Text="xxtui Notification Settings"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -1613,12 +1613,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="API密钥"
+                                  Text="API Key"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写信息推送通知API密钥"
+                                  Text="Fill Push Notifications API Key"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1640,12 +1640,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="通知来源"
+                                  Text="Notifications Source"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写信息推送通知来源"
+                                  Text="Fill Push Notification Source"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1654,7 +1654,7 @@
                                 MaxWidth="800"
                                 Margin="0,0,36,0"
                                 Text="{Binding Config.NotificationConfig.XxtuiFrom, Mode=TwoWay}"
-                                PlaceholderText="Better原神"
+                                PlaceholderText="Better Genshin"
                                 TextWrapping="NoWrap" />
                 </Grid>
                 <Grid Margin="16">
@@ -1669,12 +1669,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="通知渠道"
+                                  Text="Notifications Channel"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写信息推送通知渠道"
+                                  Text="Fill Push Notification Channel"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1696,12 +1696,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试信息推送通知"
+                                  Text="Test Push Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试通知"
+                                  Text="SendTestNotifications"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.RowSpan="2"
@@ -1709,7 +1709,7 @@
                                Margin="0,0,36,0"
                                Command="{Binding TestXxtuiNotificationCommand}"
                                CommandParameter="xxtuiNotifier"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>
@@ -1730,12 +1730,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用钉钉机器人通知"
+                                  Text="Enable DingTalk Bot Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="钉钉机器人通知相关设置"
+                                  Text="DingTalk Bot Notification Settings"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -1757,12 +1757,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="钉钉机器人通知地址"
+                                  Text="DingTalk Bot Notification URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写钉钉机器人通知地址"
+                                  Text="Fill DingTalk Bot URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1773,7 +1773,7 @@
                                 Text="{Binding Config.NotificationConfig.DingdingWebhookUrl, Mode=TwoWay}"
                                 TextWrapping="NoWrap" />
                 </Grid>
-                <!-- 添加密钥输入字段 -->
+                <!-- Add密钥输入字段 -->
                 <Grid Margin="16">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -1786,12 +1786,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="钉钉机器人密钥"
+                                  Text="DingTalk Bot Key"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写钉钉机器人密钥"
+                                  Text="Fill DingTalk Bot Key"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1814,12 +1814,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试钉钉机器人通知"
+                                  Text="Test DingTalk Bot Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试通知"
+                                  Text="SendTestNotifications"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.RowSpan="2"
@@ -1827,7 +1827,7 @@
                                Margin="0,0,36,0"
                                Command="{Binding TestDingDingWebhookNotificationCommand}"
                                CommandParameter="DingDingWebhook"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>
@@ -1848,12 +1848,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="启用 Discord Webhook 通知"
+                                  Text="Enable Discord Webhook Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="Discord Webhook 通知相关设置"
+                                  Text="Discord Webhook Notification Settings"
                                   TextWrapping="Wrap" />
                     <ui:ToggleSwitch Grid.Row="0"
                                      Grid.RowSpan="2"
@@ -1875,12 +1875,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="Webhook 网址"
+                                  Text="Webhook URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="填写 Discord 提供的 Webhook 网址"
+                                  Text="Fill Discord Webhook URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1903,12 +1903,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="用户名"
+                                  Text="Username"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="讯息显示的名称，为空时使用 Discord 中预先设定的名字"
+                                  Text="Message display name; use Discord preset if empty"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1931,12 +1931,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="头像网址"
+                                  Text="Avatar URL"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="讯息显示的头像，为空时使用 Discord 中预先设定的头像"
+                                  Text="Message Display Avatar; Use Discord Default if Blank"
                                   TextWrapping="Wrap" />
                     <ui:TextBox Grid.Row="0"
                                 Grid.RowSpan="2"
@@ -1959,12 +1959,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="截图编码"
+                                  Text="Screenshot Encoding"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="PNG 无损，JPEG 快速压缩，WebP 档案小，按需选择"
+                                  Text="PNG Lossless, JPEG Fast Compression, WebP Small Size, Choose as Needed"
                                   TextWrapping="Wrap" />
                     <ComboBox Grid.Row="0"
                               Grid.RowSpan="2"
@@ -1986,12 +1986,12 @@
                     <ui:TextBlock Grid.Row="0"
                                   Grid.Column="0"
                                   FontTypography="Body"
-                                  Text="测试 Discord Webhook 通知"
+                                  Text="Test Discord Webhook Notifications"
                                   TextWrapping="Wrap" />
                     <ui:TextBlock Grid.Row="1"
                                   Grid.Column="0"
                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                  Text="发送测试通知"
+                                  Text="SendTestNotifications"
                                   TextWrapping="Wrap" />
                     <ui:Button Grid.Row="0"
                                Grid.RowSpan="2"
@@ -1999,7 +1999,7 @@
                                Margin="0,0,36,0"
                                Command="{Binding TestDiscordWebhookNotificationCommand}"
                                CommandParameter="DiscordWebhook"
-                               Content="发送" />
+                               Content="Send" />
                 </Grid>
             </StackPanel>
         </ui:CardExpander>

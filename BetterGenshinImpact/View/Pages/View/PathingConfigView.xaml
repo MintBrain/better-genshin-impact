@@ -36,7 +36,7 @@
                     <ui:TextBlock Margin="0,0,0,8"
                                   FontSize="16"
                                   FontTypography="BodyStrong"
-                                  Text="地图追踪设置（相关配置优先级从高到低,UI样式还有问题未解决）" />
+                                  Text="Map TrackingSettings（相关Configuration优先级从高到低,UI样式还有问题未解决）" />
 
                 </StackPanel>
 
@@ -45,7 +45,7 @@
 
                         <ui:TextBlock Margin="0,0,0,8"
                                       FontTypography="BodyStrong"
-                                      Text="队伍切换设置（路径中存在符合条件的动作、采集物的情况下，自动切换至对应队伍）" />
+                                      Text="Team Switch Settings; auto switch when conditions met in path" />
                         <!--  使用ItemsControl来动态显示筛选条件  -->
                         <ItemsControl dd:DragDrop.IsDragSource="True"
                                       dd:DragDrop.IsDropTarget="True"
@@ -58,7 +58,7 @@
                                                      FontSize="20"
                                                      Glyph="&#xe411;"
                                                      Style="{StaticResource FaFontIconStyleForOneDragon}" />
-                                        <!--  采集物、路径动作  -->
+                                        <!--  采集物、路径Action  -->
                                         <ComboBox MinWidth="100"
                                                   Margin="0,0,10,5"
                                                   HorizontalAlignment="Left"
@@ -97,7 +97,7 @@
                                         <ui:TextBlock Margin="10,0"
                                                       VerticalAlignment="Center"
                                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}">
-                                            则切换到队伍
+                                            Then Switch to Team
                                         </ui:TextBlock>
 
 
@@ -110,16 +110,16 @@
                                         <Button
                                             Command="{Binding DataContext.RemovePartyConditionConfigCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                             CommandParameter="{Binding}"
-                                            Content="删除" />
+                                            Content="Delete" />
                                     </WrapPanel>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
 
-                        <!--  添加条件按钮  -->
+                        <!--  Add条件按钮  -->
                         <Button HorizontalAlignment="Left"
                                 Command="{Binding AddPartyConditionConfigCommand}"
-                                Content="+ 添加条件" />
+                                Content="+ Add condition" />
                     </StackPanel>
                 </ui:Card>
 
@@ -128,7 +128,7 @@
 
                         <ui:TextBlock Margin="0,0,0,8"
                                       FontTypography="BodyStrong"
-                                      Text="角色设置（存在多个符合条件的角色情况下，优先使用游戏内编队编号更小的）" />
+                                      Text="Character Settings (If Multiple Match, Prefer Lower In-Game Team Number)" />
                         <!--  使用ItemsControl来动态显示筛选条件  -->
                         <ItemsControl dd:DragDrop.IsDragSource="True"
                                       dd:DragDrop.IsDropTarget="True"
@@ -174,7 +174,7 @@
                                         <ui:TextBlock Margin="10,0"
                                                       VerticalAlignment="Center"
                                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}">
-                                            则角色执行
+                                            Then Character Executes
                                         </ui:TextBlock>
 
                                         <!--  结果  -->
@@ -188,16 +188,16 @@
                                         <Button
                                             Command="{Binding DataContext.RemoveAvatarConditionConfigCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                             CommandParameter="{Binding}"
-                                            Content="删除" />
+                                            Content="Delete" />
                                     </WrapPanel>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
 
-                        <!--  添加条件按钮  -->
+                        <!--  Add条件按钮  -->
                         <Button HorizontalAlignment="Left"
                                 Command="{Binding AddAvatarConditionConfigCommand}"
-                                Content="+ 添加条件" />
+                                Content="+ Add condition" />
                     </StackPanel>
                 </ui:Card>
 
@@ -214,12 +214,12 @@
                             <ui:TextBlock Grid.Row="0"
                                           Grid.Column="0"
                                           FontTypography="Body"
-                                          Text="使用小道具的间隔时间（毫秒）"
+                                          Text="Interval Between Item Uses (ms)"
                                           TextWrapping="Wrap" />
                             <ui:TextBlock Grid.Row="1"
                                           Grid.Column="0"
                                           Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                          Text="在移动期间自动使用小道具，填0为不使用"
+                                          Text="Auto Use Items While Moving; 0 = Do Not Use"
                                           TextWrapping="Wrap" />
                         </Grid>
                     </ui:CardControl.Header>
@@ -245,12 +245,12 @@
                             <ui:TextBlock Grid.Row="0"
                                           Grid.Column="0"
                                           FontTypography="Body"
-                                          Text="开启自动吃药"
+                                          Text="Enable Auto Healing Items"
                                           TextWrapping="Wrap" />
                             <ui:TextBlock Grid.Row="1"
                                           Grid.Column="0"
                                           Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                          Text="检测到红血状态时自动使用便携营养袋"
+                                          Text="Auto Use Portable Nutrition Bag on Low HP"
                                           TextWrapping="Wrap" />
                         </Grid>
                     </ui:CardControl.Header>
@@ -274,12 +274,12 @@
                             <ui:TextBlock Grid.Row="0"
                                           Grid.Column="0"
                                           FontTypography="Body"
-                                          Text="只在传送点时恢复"
+                                          Text="Heal Only at Teleport Waypoints"
                                           TextWrapping="Wrap" />
                             <ui:TextBlock Grid.Row="1"
                                           Grid.Column="0"
                                           Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                          Text="只有路径在传送点时，才会去七天神像恢复"
+                                          Text="Only Restore at Statue of Seven When Path at Teleport"
                                           TextWrapping="Wrap" />
                         </Grid>
                     </ui:CardControl.Header>

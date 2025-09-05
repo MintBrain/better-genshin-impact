@@ -51,12 +51,12 @@
                            Margin="5"
                            Appearance="Primary"
                            Click="BtnOkClick"
-                           Content="刷新"
+                           Content="Refresh"
                            IsDefault="True" />
                 <ui:Button Name="BtnCancel"
                            Margin="5"
                            Click="BtnCancelClick"
-                           Content="退出"
+                           Content="Exit"
                            IsCancel="True" />
             </StackPanel>
         </StackPanel>

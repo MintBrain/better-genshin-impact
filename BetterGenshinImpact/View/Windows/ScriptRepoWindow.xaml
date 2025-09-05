@@ -6,7 +6,7 @@
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
                  xmlns:vio="http://schemas.lepo.co/wpfui/2022/xaml/violeta"
-                 Title="脚本仓库"
+                 Title="Script Repository"
                  Width="400"
                  MinWidth="360"
                  MinHeight="50"
@@ -59,7 +59,7 @@
                                       Margin="0,0,8,0"
                                       VerticalAlignment="Center"
                                       Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}"
-                                      Text="更新渠道：" />
+                                      Text="Update Channel:" />
                         <ComboBox Grid.Column="1"
                                   MinWidth="160"
                                   VerticalAlignment="Center"
@@ -68,7 +68,7 @@
                                   SelectedItem="{Binding SelectedRepoChannel}" />
                     </Grid>
 
-                    <!--  第二行：脚本仓库URL  -->
+                    <!--  第二行：Script RepositoryURL  -->
                     <Grid Grid.Row="1" Margin="0,0,0,12">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
@@ -79,7 +79,7 @@
                                       Margin="0,0,8,0"
                                       VerticalAlignment="Center"
                                       Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}"
-                                      Text="仓库地址：" />
+                                      Text="Repository URL:" />
                         <TextBox Grid.Column="1"
                                  MinWidth="160"
                                  VerticalAlignment="Center"
@@ -99,20 +99,20 @@
                         <ui:Button Grid.Column="0"
                                    Margin="0,0,4,0"
                                    Command="{Binding UpdateRepoCommand}"
-                                   Content="更新仓库"
+                                   Content="Update Repository"
                                    Icon="{ui:SymbolIcon CloudSync24}"
                                    HorizontalAlignment="Stretch" />
                         <ui:Button Grid.Column="1"
                                    Margin="4,0,4,0"
                                    Command="{Binding ResetRepoCommand}"
-                                   Content="重置仓库"
+                                   Content="Reset Repository"
                                    Icon="{ui:SymbolIcon ArrowReset24}"
                                    HorizontalAlignment="Stretch"/>
                         <ui:Button Grid.Column="2"
                                    Margin="4,0,0,0"
                                    Appearance="Primary"
                                    Command="{Binding OpenLocalScriptRepoCommand}"
-                                   Content="打开仓库"
+                                   Content="Open Repository"
                                    Icon="{ui:SymbolIcon BookStar24}"
                                    HorizontalAlignment="Stretch"/>
                     </Grid>

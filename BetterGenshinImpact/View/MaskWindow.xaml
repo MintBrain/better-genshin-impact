@@ -68,7 +68,7 @@
                 <RowDefinition Height="5*" />
             </Grid.RowDefinitions>
 
-            <!--  日志和状态  -->
+            <!--  日志和Status  -->
             <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="5"
                   HorizontalAlignment="Left" VerticalAlignment="Bottom"
                   Height="213" Width="477">
@@ -96,9 +96,9 @@
                                  Visibility="{Binding Config.MaskWindowConfig.ShowLogBox, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <d:FlowDocument FontFamily="{Binding FontFamily, ElementName=LogTextBox}" FontSize="{Binding FontSize, ElementName=LogTextBox}">
                             <Paragraph>
-                                <Run>[00:00:00 INF] 更好的原神</Run>
+                                <Run>[00:00:00 INF] Better Genshin Impact</Run>
                                 <LineBreak/>
-                                <Run>[00:00:00 INF] 遮罩窗口已启动，游戏大小1920x1080，素材缩放1.00，DPI缩放1</Run>
+                                <Run>[00:00:00 INF] Mask Window Started, Game 1920x1080, Assets Scale 1.00, DPI 1</Run>
                                 <LineBreak/>
                                 <Run>[00:00:01 INF] Never gonna give you up</Run>
                                 <LineBreak/>
@@ -197,7 +197,7 @@
                                FontStretch="Medium"
                                FontWeight="DemiBold"
                                Foreground="White"
-                               Text="西" />
+                               Text="West" />
                     <TextBlock Grid.Column="2"
                                Grid.Row="4"
                                HorizontalAlignment="Center"
@@ -207,7 +207,7 @@
                                FontStretch="Medium"
                                FontWeight="DemiBold"
                                Foreground="White"
-                               Text="南" />
+                               Text="South" />
                     <TextBlock Grid.Column="4"
                                Grid.Row="2"
                                HorizontalAlignment="Center"
@@ -217,7 +217,7 @@
                                FontStretch="Medium"
                                FontWeight="DemiBold"
                                Foreground="White"
-                               Text="东" />
+                               Text="East" />
                     <TextBlock Grid.Column="2"
                                Grid.Row="0"
                                HorizontalAlignment="Center"
@@ -227,7 +227,7 @@
                                FontStretch="Medium"
                                FontWeight="DemiBold"
                                Foreground="White"
-                               Text="北" />
+                               Text="North" />
                 </Grid>
             </Viewbox>
 

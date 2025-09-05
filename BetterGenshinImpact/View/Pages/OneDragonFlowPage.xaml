@@ -31,14 +31,14 @@
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
 
-        <!--  左侧任务列表  -->
+        <!--  左侧Task List  -->
        <DockPanel Grid.Column="0">
            <DockPanel.ContextMenu>
                <ContextMenu>
-                   <MenuItem Command="{Binding AddTaskGroupCommand}" Header="新增配置" />
+                   <MenuItem Command="{Binding AddTaskGroupCommand}" Header="Add Config" />
                    <MenuItem Command="{Binding DeleteTaskGroupCommand}"
                              CommandParameter="{Binding SelectedItem, RelativeSource={RelativeSource AncestorType=ui:ListView}}"
-                             Header="删除配置" />
+                             Header="DeleteConfiguration" />
            </ContextMenu>
        </DockPanel.ContextMenu>
        <Grid DockPanel.Dock="Top"
@@ -55,7 +55,7 @@
             VerticalAlignment="Center"
             FontSize="16"
             FontWeight="Bold"
-            Text="任务列表" />
+            Text="Task List" />
         <ui:Button
             Grid.Column="1"
             Grid.Row="0"
@@ -128,7 +128,7 @@
                                     <Setter Property="Background" Value="Transparent" />
                                     <Setter Property="BorderThickness" Value="0" />
                                     <Setter Property="Padding" Value="0" />
-                                    <!--  添加以下设置来禁用选中效果  -->
+                                    <!--  Add以下Settings来禁用选中效果  -->
                                     <Setter Property="Template">
                                         <Setter.Value>
                                             <ControlTemplate TargetType="{x:Type ListViewItem}">
@@ -161,7 +161,7 @@
                             <Setter.Value>
                                 <DataTemplate>
                                     <TextBlock Margin="0,0,0,0"
-                                               Text="      ± 鼠标右击添加或删除任务       "
+                                               Text="      ± Right-click to Add/Remove Task       "
                                                VerticalAlignment="Top"
                                                HorizontalAlignment="Left"
                                                FontSize="14"
@@ -177,7 +177,7 @@
         </ContentControl.Style>
     </ContentControl>
 </DockPanel>
-        <!--  右侧配置  -->
+        <!--  右侧Configuration  -->
         <!--<ContentControl Grid.Column="1"
                         Margin="20,0,0,0"
                         Content="{Binding SelectedTask.ViewModel}">
@@ -212,7 +212,7 @@
             </ContentControl.Resources>
         </ContentControl>-->
 
-        <!--  右侧配置  -->
+        <!--  右侧Configuration  -->
         <DockPanel Grid.Column="1" Margin="16,0,0,0">
             <StackPanel Margin="0,0,0,10" DockPanel.Dock="Top">
                 <Grid Margin="0,0,9,0">
@@ -226,7 +226,7 @@
                                FontSize="16"
                                FontWeight="Bold"
                                VerticalAlignment="Center"
-                               Text="配置" 
+                               Text="Configuration" 
                                x:Name="ConfigListGrid"/>
                     <ComboBox Grid.Column="1"
                               MinWidth="200"
@@ -250,18 +250,18 @@
                     <!--<ui:Button Grid.Column="3"
                                Icon="{ui:SymbolIcon Save24}"
                                Command="{Binding SaveConfigurationCommand}"
-                               Content="保存配置" />-->
+                               Content="SaveConfiguration" />-->
                 </Grid>
                 <Separator Margin="0,5,0,0" BorderThickness="0,1,0,0" />
             </StackPanel>
 
             <ScrollViewer>
                 <StackPanel Margin="0,0,18,0">
-                    <!--  合成树脂  -->
+                    <!--  Craft Resin  -->
                     <TextBlock Margin="4,0,0,4"
                                FontSize="14"
                                Foreground="{DynamicResource SystemAccentColorPrimaryBrush}"
-                               Text="合成树脂" />
+                               Text="Craft Resin" />
                     
                     <ui:CardControl Margin="0,0,0,12" Icon="{ui:SymbolIcon WeatherMoon24}">
 
@@ -282,7 +282,7 @@
                                               Width="Auto"
                                               HorizontalAlignment="Left"
                                               FontTypography="Body"
-                                              Text="合成树脂合成台"
+                                              Text="Craft Resin Workbench"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
                                               Grid.Column="0"
@@ -290,7 +290,7 @@
                                               Width="Auto"
                                               HorizontalAlignment="Left"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                              Text="指定地区合成树脂"
+                                              Text="Craft Resin in Specified Region"
                                               TextWrapping="Wrap" />
                                 <ComboBox 
                                     Grid.Row="0"
@@ -309,7 +309,7 @@
                                               Margin=" 15,0,0,0"
                                               HorizontalAlignment="Left"
                                               FontTypography="Body"
-                                              Text="合成后保留"
+                                              Text="Keep After Crafting"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
                                               Grid.Column="2"
@@ -317,7 +317,7 @@
                                               Width="Auto"
                                               HorizontalAlignment="Left"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                              Text="原粹树脂数量"
+                                              Text="Original Resin Amount"
                                               TextWrapping="Wrap" />
                                 <TextBox Grid.Row="0"
                                          Grid.Column="3"
@@ -335,15 +335,15 @@
                     </ui:CardControl>
 
 
-                    <!--  自动秘境  -->
+                    <!--  Auto Domain  -->
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="4,0,0,4">
                         <TextBlock FontSize="14"
                                    Foreground="{DynamicResource SystemAccentColorPrimaryBrush}"
-                                   Text="自动秘境" />
+                                   Text="Auto Domain" />
                         <TextBlock Margin="4,0,0,0"
                                    VerticalAlignment="Center"
                                    FontSize="11"
-                                   Text="（此处未覆盖的配置可在 独立任务-自动秘境 中配置）" />
+                                   Text="Configurations not covered here can be set in Independent Task - Auto Domain" />
                     </StackPanel>
  
 
@@ -364,12 +364,12 @@
                                 <ui:TextBlock Grid.Row="0"
                                               Grid.Column="0"
                                               FontTypography="Body"
-                                              Text="每日秘境刷取配置"
+                                              Text="Daily Domain Farming Config"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
                                               Grid.Column="0"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                              Text="前往指定秘境消耗树脂，并自动领取奖励。"
+                                              Text="Spend Resin to Enter Target Domain and Auto-Claim Rewards"
                                               TextWrapping="Wrap">
                                 </ui:TextBlock>
                                 <ui:ToggleSwitch Grid.Row="0"
@@ -392,12 +392,12 @@
                                 <ui:TextBlock Grid.Row="0"
                                               Grid.Column="0"
                                               FontTypography="Body"
-                                              Text="进入秘境切换的队伍名称"
+                                              Text="Team Name to switch when entering dungeon"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
                                               Grid.Column="0"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                              Text="注意是游戏内你设置的名称"
+                                              Text="Note your in-game Settings Name"
                                               TextWrapping="Wrap" />
                                 <ui:TextBox Grid.Row="0"
                                             Grid.RowSpan="2"
@@ -406,7 +406,7 @@
                                             MaxWidth="800"
                                             Margin="20,0,36,0"
                                             Text="{Binding SelectedConfig.PartyName, Mode=TwoWay}"
-                                            PlaceholderText="填写队伍名称"
+                                            PlaceholderText="Fill Team Name"
                                             TextAlignment="Center"
                                             TextWrapping="Wrap" />
                             </Grid>
@@ -426,14 +426,14 @@
                                               Grid.Column="0"
                                               FontTypography="Body"
                                               HorizontalAlignment="Left"
-                                              Text="选择秘境"
+                                              Text="Select Domain"
                                               Width="Auto"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
                                               Grid.Column="0"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                               HorizontalAlignment="Left"
-                                              Text="秘境名称"
+                                              Text="Dungeon Name"
                                               Width="Auto"
                                               TextWrapping="Wrap" />
                                 <ComboBox Grid.Row="0"
@@ -451,7 +451,7 @@
                                               Margin="10,0,10,0"
                                               FontTypography="Body"
                                               HorizontalAlignment="Right"
-                                              Text="周日或限时"
+                                              Text="Sunday or Time-Limited"
                                               Width="Auto"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
@@ -459,7 +459,7 @@
                                               Margin="10,0,10,0"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                               HorizontalAlignment="Right"
-                                              Text="选择序号"
+                                              Text="Select Number"
                                               Width="Auto"
                                               TextWrapping="Wrap" />
                                 <ComboBox Grid.Row="0"
@@ -495,12 +495,12 @@
                                 <ui:TextBlock Grid.Row="0"
                                               Grid.Column="0"
                                               FontTypography="Body"
-                                              Text="每周秘境刷取配置"
+                                              Text="Weekly Domain Farming Config"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
                                               Grid.Column="0"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                              Text="启用后，每日刷取配置将会失效。"
+                                              Text="After Enabling, Daily Farm Config Will Expire"
                                               TextWrapping="Wrap" />
                                 <ui:ToggleSwitch Grid.Row="0"
                                                  Grid.RowSpan="2"
@@ -520,7 +520,7 @@
                                               FontTypography="Body"
                                               FontSize="12"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                              Text="周期始于凌晨 4:00 ，如周一 4:00 至周二 3:59 刷取周一秘境" 
+                                              Text="Cycle starts at 4:00 AM; e.g., Monday 4:00 to Tuesday 3:59 runs Monday Dungeon" 
                                               TextWrapping="Wrap">
                                 </ui:TextBlock>
                            
@@ -534,7 +534,7 @@
                                               Grid.Column="0"
                                               Margin="38,0,0,0"
                                               HorizontalAlignment="Center"
-                                              Text="周一"
+                                              Text="Monday"
                                               VerticalAlignment="Center" />
                                 <ui:TextBox Grid.Row="0"
                                             Grid.Column="1"
@@ -544,7 +544,7 @@
                                             TextWrapping="Wrap"
                                             VerticalAlignment="Center"
                                             TextAlignment="Center"
-                                            PlaceholderText="填写队伍名称 " />
+                                            PlaceholderText="Fill Team Name " />
                                 <ComboBox Grid.Row="0"
                                           Grid.Column="2"
                                           Width="140"
@@ -563,7 +563,7 @@
                                               FontTypography="Body"
                                               Margin="38,0,0,0"
                                               HorizontalAlignment="Center"
-                                              Text="周二"
+                                              Text="Tuesday"
                                               VerticalAlignment="Center" />
                                 <ui:TextBox Grid.Row="0"
                                             Grid.Column="1"
@@ -573,7 +573,7 @@
                                             TextWrapping="Wrap"
                                             VerticalAlignment="Center"
                                             TextAlignment="Center"
-                                            PlaceholderText="填写队伍名称 " />
+                                            PlaceholderText="Fill Team Name " />
                                 <ComboBox Grid.Row="0"
                                           Grid.Column="2"
                                           Width="140"
@@ -591,7 +591,7 @@
                                               Grid.Column="0"
                                               Margin="38,0,0,0"
                                               HorizontalAlignment="Center"
-                                              Text="周三"
+                                              Text="Wednesday"
                                               VerticalAlignment="Center" />
                                 <ui:TextBox Grid.Row="0"
                                             Grid.Column="1"
@@ -601,7 +601,7 @@
                                             TextWrapping="Wrap"
                                             VerticalAlignment="Center"
                                             TextAlignment="Center"
-                                            PlaceholderText="填写队伍名称 " />
+                                            PlaceholderText="Fill Team Name " />
                                 <ComboBox Grid.Row="0"
                                           Grid.Column="2"
                                           Width="140"
@@ -620,7 +620,7 @@
                                               Grid.Column="0"
                                               Margin="38,0,0,0"
                                               HorizontalAlignment="Center"
-                                              Text="周四"
+                                              Text="Thursday"
                                               VerticalAlignment="Center" />
                                 <ui:TextBox Grid.Row="0"
                                             Grid.Column="1"
@@ -630,7 +630,7 @@
                                             TextWrapping="Wrap"
                                             VerticalAlignment="Center"
                                             TextAlignment="Center"
-                                            PlaceholderText="填写队伍名称 " />
+                                            PlaceholderText="Fill Team Name " />
                                 <ComboBox Grid.Row="0"
                                           Grid.Column="2"
                                           Width="140"
@@ -649,7 +649,7 @@
                                               Grid.Column="0"
                                               Margin="38,0,0,0"
                                               HorizontalAlignment="Center"
-                                              Text="周五"
+                                              Text="Friday"
                                               VerticalAlignment="Center" />
                                 <ui:TextBox Grid.Row="0"
                                             Grid.Column="1"
@@ -659,7 +659,7 @@
                                             TextWrapping="Wrap"
                                             VerticalAlignment="Center"
                                             TextAlignment="Center"
-                                            PlaceholderText="填写队伍名称 " />
+                                            PlaceholderText="Fill Team Name " />
                                 <ComboBox Grid.Row="0"
                                           Grid.Column="2"
                                           Width="140"
@@ -679,7 +679,7 @@
                                               Grid.Column="0"
                                               Margin="38,0,0,0"
                                               HorizontalAlignment="Center"
-                                              Text="周六"
+                                              Text="Saturday"
                                               VerticalAlignment="Center" />
                                 <ui:TextBox Grid.Row="0"
                                             Grid.Column="1"
@@ -689,7 +689,7 @@
                                             TextWrapping="Wrap"
                                             VerticalAlignment="Center"
                                             TextAlignment="Center"
-                                            PlaceholderText="填写队伍名称 " />
+                                            PlaceholderText="Fill Team Name " />
                                 <ComboBox Grid.Row="0"
                                           Grid.Column="2"
                                           Width="140"
@@ -713,7 +713,7 @@
                                               Grid.Column="0"
                                               Margin="38,0,0,0"
                                               HorizontalAlignment="Center"
-                                              Text="周日"
+                                              Text="Sunday"
                                               VerticalAlignment="Center" />
                                 <ui:TextBox Grid.Row="0"
                                             Grid.Column="1"
@@ -723,7 +723,7 @@
                                             TextWrapping="Wrap"
                                             VerticalAlignment="Center"
                                             TextAlignment="Center"
-                                            PlaceholderText="填写队伍名称 " />
+                                            PlaceholderText="Fill Team Name " />
                                 <ComboBox Grid.Row="0"
                                           Grid.Column="2"
                                           Width="140"
@@ -744,7 +744,7 @@
                                         Padding="10">
                                     <ui:TextBlock FontTypography="Body"
                                                   FontSize="13" 
-                                                  Text="周日或限时三种奖励,从上往下(1/2/3)序号:"
+                                                  Text="Sunday or Time-Limited三种奖励,从上往下(1/2/3)序号:"
                                                   TextAlignment="Justify"
                                                   TextWrapping="Wrap" />
                                 </Border>
@@ -785,7 +785,7 @@
                                               VerticalAlignment="Center"
                                               HorizontalAlignment="Center"
                                               Margin="0,0,0,0"
-                                              Content="领奖树脂设定"
+                                              Content="Resin Settings for Claiming"
                                               x:Name="ToggleButton">
                                 </ToggleButton>
                                 
@@ -793,13 +793,13 @@
                                               Grid.Column="1"
                                               FontTypography="Body"
                                               HorizontalAlignment="Right"
-                                              Text="分解圣遗物"
+                                              Text="Decompose Artifacts"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
                                               Grid.Column="1"
                                               HorizontalAlignment="Right"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                              Text="最高的星级"
+                                              Text="Highest Star Rating"
                                               TextWrapping="Wrap" />
                                 
                                 <!-- 弹窗 -->
@@ -833,7 +833,7 @@
                                                 <ToggleButton Grid.Column="0"
                                                         Margin="0,0,0,0"
                                                         IsChecked="{Binding Config.AutoDomainConfig.SpecifyResinUse, Mode=TwoWay}"
-                                                        Content="模式切换" />
+                                                        Content="Mode Switch" />
                                                 
                                                 <!-- 根据模SpecifyResinUse显示不同的文字 -->
                                                 <ui:TextBlock Grid.Column="1"
@@ -841,7 +841,7 @@
                                                                 FontSize="14"
                                                                 VerticalAlignment="Center"
                                                                 HorizontalAlignment="Right"
-                                                                Text="先用浓缩,后原粹,其余不用"
+                                                                Text="Use Condensed First, Then Original, Ignore Others"
                                                                 Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                                 TextWrapping="Wrap"
                                                                 Visibility="{Binding Config.AutoDomainConfig.SpecifyResinUse, Converter={StaticResource BooleanToVisibilityRevertConverter}}" />
@@ -850,7 +850,7 @@
                                                                 FontSize="14"
                                                                 VerticalAlignment="Center"
                                                                 HorizontalAlignment="Right"
-                                                                Text="按下方配置数量使用树脂"
+                                                                Text="Press to Use Resin for Config Quantity"
                                                                 Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                                 TextWrapping="Wrap"
                                                                 Visibility="{Binding Config.AutoDomainConfig.SpecifyResinUse, Converter={StaticResource BooleanToVisibilityConverter}}" />
@@ -862,10 +862,10 @@
                                                            Margin="0,0,0,0"
                                                            Background="Gray"/>
                                                 
-                                                <!-- 原粹树脂设置 -->
+                                                <!-- 原粹树脂Settings -->
                                                 <StackPanel Orientation="Horizontal"
                                                             Margin="0,10,0,12">
-                                                    <ui:TextBlock Text="原粹树脂刷取次数："
+                                                    <ui:TextBlock Text="Original Resin Farm Count:"
                                                                   VerticalAlignment="Center"
                                                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                                   Margin="0,0,8,0" />
@@ -877,10 +877,10 @@
                                                                   Width="120"/>
                                                 </StackPanel>
                                                 
-                                                <!-- 浓缩树脂设置 -->
+                                                <!-- 浓缩树脂Settings -->
                                                 <StackPanel Orientation="Horizontal"
                                                             Margin="0,0,0,12">
-                                                    <ui:TextBlock Text="浓缩树脂刷取次数："
+                                                    <ui:TextBlock Text="Condensed Resin Farming Count:"
                                                                   VerticalAlignment="Center"
                                                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                                   Margin="0,0,8,0" />
@@ -892,10 +892,10 @@
                                                                   Width="120" />
                                                 </StackPanel>
 
-                                                <!-- 须臾树脂设置 -->
+                                                <!-- Fragile ResinSettings -->
                                                 <StackPanel Orientation="Horizontal"
                                                             Margin="0,0,0,12">
-                                                    <ui:TextBlock Text="须臾树脂刷取次数："
+                                                    <ui:TextBlock Text="Fragile Resin Collection Count:"
                                                                   VerticalAlignment="Center"
                                                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                                   Margin="0,0,8,0" />
@@ -907,10 +907,10 @@
                                                                   Width="120" />
                                                 </StackPanel>
 
-                                                <!-- 脆弱树脂设置 -->
+                                                <!-- 脆弱树脂Settings -->
                                                 <StackPanel Orientation="Horizontal"
                                                             Margin="0,0,0,0">
-                                                    <ui:TextBlock Text="脆弱树脂刷取次数："
+                                                    <ui:TextBlock Text="Fragile Resin Farming Count:"
                                                                   VerticalAlignment="Center"
                                                                   Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                                   Margin="0,0,8,0" />
@@ -941,11 +941,11 @@
                         </StackPanel>
                     </ui:CardControl>
 
-                    <!--  领取奖励  -->
+                    <!--  Claim Rewards  -->
                     <TextBlock Margin="4,0,0,4"
                                FontSize="14"
                                Foreground="{DynamicResource SystemAccentColorPrimaryBrush}"
-                               Text="领取奖励" />
+                               Text="Claim Rewards" />
                     <ui:CardControl Margin="0,0,0,12">
                         <ui:CardControl.Icon>
                             <ui:FontIcon Glyph="&#xf14e;" Style="{StaticResource FaFontIconStyle}" />
@@ -959,12 +959,12 @@
                                 <ui:TextBlock Grid.Row="0"
                                               Grid.Column="0"
                                               FontTypography="Body"
-                                              Text="领取奖励的冒险者协会"
+                                              Text="Adventurers&apos; Guild for Claiming Rewards"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
                                               Grid.Column="0"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                              Text="前往指定地区冒险者协会领取"
+                                              Text="Go to Adventurers Guild in Target Area to Claim"
                                               TextWrapping="Wrap" />
                             </Grid>
                         </ui:CardControl.Header>
@@ -986,7 +986,7 @@
                                 <ui:TextBlock Grid.Row="0"
                                               Grid.Column="0"
                                               FontTypography="Body"
-                                              Text="领取前切换队伍（好感队）"
+                                              Text="Switch Team Before Claiming (Friendship Team)"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
                                               Grid.Column="0"
@@ -994,7 +994,7 @@
                                               HorizontalAlignment="Center"
                                               VerticalAlignment="Center"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                              Text="用于给指定队伍加好感度"
+                                              Text="Increase Friendship for Specific Team"
                                               TextWrapping="Wrap" />
                             </Grid>
                         </ui:CardControl.Header>
@@ -1003,7 +1003,7 @@
                             MaxWidth="800"
                             Margin="0,0,28,0"
                             Text="{Binding SelectedConfig.DailyRewardPartyName, Mode=TwoWay}"
-                            PlaceholderText="填写好感队名称"
+                            PlaceholderText="Fill Favor Team Name"
                             TextAlignment="Center"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
@@ -1014,7 +1014,7 @@
                     <TextBlock Margin="4,0,0,4"
                                FontSize="14"
                                Foreground="{DynamicResource SystemAccentColorPrimaryBrush}"
-                               Text="尘歌壶配置" />
+                               Text="Serenitea Pot Config" />
                    
                     <ui:CardControl Margin="0,0,0,12">
                         <ui:CardControl.Icon>
@@ -1029,12 +1029,12 @@
                                 <ui:TextBlock Grid.Row="0"
                                               Grid.Column="0"
                                               FontTypography="Body"
-                                              Text="进壶方式选择"
+                                              Text="Serenitea Pot Entry Method"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
                                               Grid.Column="0"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                              Text="购买日期和商品"
+                                              Text="Purchase Date and Item"
                                               TextWrapping="Wrap" />
                             </Grid>
                         </ui:CardControl.Header>
@@ -1052,7 +1052,7 @@
                                 Height="36"
                                 Padding="0"
                                 ClickMode="Press"
-                                Content="购买选择"
+                                Content="Purchase Selection"
                                 Click="SereniteaPotTpType_Clicked"
                                 x:Name="PotButton">
                             </ToggleButton>
@@ -1103,7 +1103,7 @@
                                                               FontSize="14"
                                                               HorizontalAlignment="Left"
                                                               VerticalAlignment="Center"
-                                                              Text="日期不影响领取好感和钱币"
+                                                              Text="Date Does Not Affect Getting Friendship or Mora"
                                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                               TextWrapping="Wrap"/>
                                                 <ComboBox Grid.Row="1" 
@@ -1132,7 +1132,7 @@
                                                               FontSize="14"
                                                               HorizontalAlignment="Left"
                                                               VerticalAlignment="Center"
-                                                              Text="布匹"
+                                                              Text="Cloth"
                                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                               TextWrapping="Wrap"/>
                                                 
@@ -1151,7 +1151,7 @@
                                                               FontSize="14"
                                                               HorizontalAlignment="Left"
                                                               VerticalAlignment="Center"
-                                                              Text="须臾树脂"
+                                                              Text="Fragile Resin"
                                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                               TextWrapping="Wrap"/>
                                                 
@@ -1170,7 +1170,7 @@
                                                               FontSize="14"
                                                               HorizontalAlignment="Left"
                                                               VerticalAlignment="Center"
-                                                              Text="大英雄的经验"
+                                                              Text="Hero XP"
                                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                               TextWrapping="Wrap"/>
                                                 
@@ -1189,7 +1189,7 @@
                                                               FontSize="14"
                                                               HorizontalAlignment="Left"
                                                               VerticalAlignment="Center"
-                                                              Text="流浪者的经验"
+                                                              Text="Wanderer’s Experience"
                                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                               TextWrapping="Wrap"/>
                                                 
@@ -1208,7 +1208,7 @@
                                                               FontSize="14"
                                                               HorizontalAlignment="Left"
                                                               VerticalAlignment="Center"
-                                                              Text="精锻用魔矿"
+                                                              Text="Refined Magical Ore"
                                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                               TextWrapping="Wrap"/>
                                                 
@@ -1227,7 +1227,7 @@
                                                               FontSize="14"
                                                               HorizontalAlignment="Left"
                                                               VerticalAlignment="Center"
-                                                              Text="摩拉"
+                                                              Text="Mora"
                                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                               TextWrapping="Wrap"/>
                                                 
@@ -1246,7 +1246,7 @@
                                                               FontSize="14"
                                                               HorizontalAlignment="Left"
                                                               VerticalAlignment="Center"
-                                                              Text="祝圣精华"
+                                                              Text="Holy Essence"
                                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                               TextWrapping="Wrap"/>
                                                 
@@ -1265,7 +1265,7 @@
                                                               FontSize="14"
                                                               HorizontalAlignment="Left"
                                                               VerticalAlignment="Center"
-                                                              Text="祝圣油膏"
+                                                              Text="Holy Oil"
                                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                                               TextWrapping="Wrap"/>
                                             </Grid>  
@@ -1287,7 +1287,7 @@
                                                     VerticalContentAlignment="Center"
                                                     Width="70"
                                                     Margin="15,0,5,5"
-                                                    Content="确定" 
+                                                    Content="Confirm" 
                                                     x:Name="PopupConfirmButton"
                                                     Click="SereniteaPotTpType_Clicked"/>
                                                 <Button
@@ -1297,7 +1297,7 @@
                                                     VerticalContentAlignment="Center"
                                                     Width="70"
                                                     Margin="5,0,5,5"
-                                                    Content="取消" 
+                                                    Content="Cancel" 
                                                     x:Name="PopupCloseButton"
                                                     Click="SereniteaPotTpType_Clicked"/>
                                             </Grid>
@@ -1309,11 +1309,11 @@
                         </StackPanel>
                     </ui:CardControl>
                     
-                    <!--  完成后操作  -->
+                    <!--  Post-Action  -->
                     <TextBlock Margin="4,0,0,4"
                                FontSize="14"
                                Foreground="{DynamicResource SystemAccentColorPrimaryBrush}"
-                               Text="完成后操作" />
+                               Text="Post-Action" />
                     <ui:CardControl Margin="0,0,0,12">
                         <ui:CardControl.Icon>
                             <ui:FontIcon Glyph="&#xf11e;" Style="{StaticResource FaFontIconStyle}" />
@@ -1327,12 +1327,12 @@
                                 <ui:TextBlock Grid.Row="0"
                                               Grid.Column="0"
                                               FontTypography="Body"
-                                              Text="任务完成后执行的操作"
+                                              Text="Actions After Task Completion"
                                               TextWrapping="Wrap" />
                                 <ui:TextBlock Grid.Row="1"
                                               Grid.Column="0"
                                               Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                              Text="一条龙结束后操作"
+                                              Text="One-Click Full Run Post-Action"
                                               TextWrapping="Wrap" />
                             </Grid>
                         </ui:CardControl.Header>
@@ -1342,7 +1342,7 @@
                                   ItemsSource="{Binding CompletionActionList}" />
                     </ui:CardControl>
 
-                    <!--  可以继续添加其他设置项  -->
+                    <!--  可以继续AddOther Settings项  -->
 
                 </StackPanel>
             </ScrollViewer>

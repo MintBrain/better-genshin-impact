@@ -15,6 +15,6 @@
                    FontWeight="Bold"
                    Text="{Binding Title}" />
 
-        <!-- 在这里添加SereniteaPotViewModel特定的控件 -->
+        <!-- 在这里AddSereniteaPotViewModel特定的控件 -->
     </StackPanel>
 </UserControl>

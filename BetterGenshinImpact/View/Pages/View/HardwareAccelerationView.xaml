@@ -16,7 +16,7 @@
                   HorizontalScrollBarVisibility="Auto"
                   VerticalScrollBarVisibility="Auto">
         <StackPanel Width="700" Margin="42,16,42,12">
-            <!--  推理设备配置  -->
+            <!--  Inference Device Config  -->
             <ui:CardExpander Margin="0,0,0,12"
                              ContentPadding="0"
                              Icon="{ui:SymbolIcon Settings24}">
@@ -33,16 +33,16 @@
                         <ui:TextBlock Grid.Row="0"
                                       Grid.Column="0"
                                       FontTypography="Body"
-                                      Text="推理设备配置"
+                                      Text="Inference Device Config"
                                       TextWrapping="Wrap" />
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                       TextWrapping="Wrap">
-                            修改后需要重启程序生效，不正确的修改可能会导致程序异常
+                            Restart Required After Edit; incorrect changes may cause errors
                         </ui:TextBlock>
                     </Grid>
-                    <!-- <TextBlock FontWeight="SemiBold" Text="推理设备配置" /> -->
+                    <!-- <TextBlock FontWeight="SemiBold" Text="Inference Device Config" /> -->
                 </ui:CardExpander.Header>
                 <StackPanel>
                     <!--  Inference Device  -->
@@ -59,7 +59,7 @@
                         </Grid.ColumnDefinitions>
                         <ui:TextBlock Grid.Row="0"
                                       FontTypography="Body"
-                                      Text="推理设备类型" />
+                                      Text="Inference Device Type" />
                         <ComboBox Grid.Row="0"
                                   Grid.RowSpan="2"
                                   Grid.Column="1"
@@ -69,11 +69,11 @@
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="选择推理使用的硬件设备类型 默认使用CPU" />
+                                      Text="Select inference hardware type; default CPU" />
                         <TextBlock Grid.Row="2"
                                    Grid.Column="0"
                                    Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                                   Text="{Binding ProviderTypesText, StringFormat='当前加载: {0}'}" />
+                                   Text="&apos;Currently Loaded: {0}&apos;} = {Binding ProviderTypesText, StringFormat=&apos;Currently Loaded: {0}&apos;}='Currently Loaded: {0}'}" />
                     </Grid>
                     <!--  缓存管理  -->
                     <Separator Margin="-18,0" BorderThickness="0,1,0,0" />
@@ -88,16 +88,16 @@
                         </Grid.ColumnDefinitions>
                         <ui:TextBlock Grid.Row="0"
                                       FontTypography="Body"
-                                      Text="缓存文件管理" />
+                                      Text="Cache File Management" />
                         <ui:Button Grid.Row="0"
                                    Grid.RowSpan="2"
                                    Grid.Column="1"
                                    Command="{Binding OpenCacheFolderCommand}"
-                                   Content="打开缓存目录" />
+                                   Content="Open Cache Directory" />
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="旧版本的缓存文件可以手动删除。" />
+                                      Text="Old version cache files can be manually deleted" />
                     </Grid>
                     <!--  CPU OCR  -->
                     <Separator Margin="-18,0" BorderThickness="0,1,0,0" />
@@ -113,7 +113,7 @@
                         </Grid.ColumnDefinitions>
                         <ui:TextBlock Grid.Row="0"
                                       FontTypography="Body"
-                                      Text="强制OCR使用CPU" />
+                                      Text="Force OCR to Use CPU" />
                         <ui:ToggleSwitch Grid.Row="0"
                                          Grid.RowSpan="2"
                                          Grid.Column="1"
@@ -121,11 +121,11 @@
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="解决部分GPU推理性能和报错问题 默认关闭" />
+                                      Text="Fix GPU inference and error issues (Default Off)" />
                         <TextBlock Grid.Row="2"
                                    Grid.Column="0"
                                    Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                                   Text="{Binding Status.CpuOcr, StringFormat='当前状态: {0}'}" />
+                                   Text="&apos;Current Status: {0}&apos;} = {Binding Status.CpuOcr, StringFormat=&apos;Current Status: {0}&apos;}='Current Status: {0}'}" />
                     </Grid>
                     <!--  GPU Device  -->
                     <Separator Margin="-18,0" BorderThickness="0,1,0,0" />
@@ -141,7 +141,7 @@
                         </Grid.ColumnDefinitions>
                         <ui:TextBlock Grid.Row="0"
                                       FontTypography="Body"
-                                      Text="GPU设备ID" />
+                                      Text="GPU Device ID" />
                         <ui:TextBox Grid.Row="0"
                                     Grid.RowSpan="2"
                                     Grid.Column="1"
@@ -150,11 +150,11 @@
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="指定使用的GPU设备编号 使用默认配置请设为0 可以在任务管理器中查看编号" />
+                                      Text="Specify GPU Device Number; 0 = Default; Check via Task Manager" />
                         <TextBlock Grid.Row="2"
                                    Grid.Column="0"
                                    Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                                   Text="{Binding Status.DmlDeviceId, StringFormat='当前DML设备: {0}'}" />
+                                   Text="&apos;Current DML Device: {0}&apos;} = {Binding Status.DmlDeviceId, StringFormat=&apos;Current DML Device: {0}&apos;}='Current DML Device: {0}'}" />
                     </Grid>
                     <!--  _optimizedModel  -->
                     <Separator Margin="-18,0" BorderThickness="0,1,0,0" />
@@ -170,7 +170,7 @@
                         </Grid.ColumnDefinitions>
                         <ui:TextBlock Grid.Row="0"
                                       FontTypography="Body"
-                                      Text="是否输出优化后的模型文件到缓存" />
+                                      Text="Output Optimized Model to Cache" />
                         <ui:ToggleSwitch Grid.Row="0"
                                          Grid.RowSpan="2"
                                          Grid.Column="1"
@@ -178,16 +178,16 @@
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="注意:在不支持的执行器上使用会导致异常。默认关闭。" />
+                                      Text="Note: Using on unsupported executor may cause errors; default Off" />
                         <TextBlock Grid.Row="2"
                                    Grid.Column="0"
                                    Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                                   Text="{Binding Status.OptimizedModel, StringFormat='当前状态: {0}'}" />
+                                   Text="&apos;Current Status: {0}&apos;} = {Binding Status.OptimizedModel, StringFormat=&apos;Current Status: {0}&apos;}='Current Status: {0}'}" />
                     </Grid>
 
                 </StackPanel>
             </ui:CardExpander>
-            <!--  CUDA配置  -->
+            <!--  CUDA Configuration  -->
             <ui:CardExpander Margin="0,0,0,12"
                              ContentPadding="0"
                              Icon="{ui:SymbolIcon Settings24}">
@@ -204,13 +204,13 @@
                         <ui:TextBlock Grid.Row="0"
                                       Grid.Column="0"
                                       FontTypography="Body"
-                                      Text="CUDA配置"
+                                      Text="CUDA Configuration"
                                       TextWrapping="Wrap" />
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                       TextWrapping="Wrap">
-                            修改后需要重启程序生效。
+                            Restart Needed After Edit。
                         </ui:TextBlock>
                     </Grid>
                 </ui:CardExpander.Header>
@@ -229,7 +229,7 @@
                         </Grid.ColumnDefinitions>
                         <ui:TextBlock Grid.Row="0"
                                       FontTypography="Body"
-                                      Text="CUDA设备ID" />
+                                      Text="CUDA Device ID" />
                         <ui:TextBox Grid.Row="0"
                                     Grid.RowSpan="2"
                                     Grid.Column="1"
@@ -238,11 +238,11 @@
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="指定CUDA设备编号 使用默认配置请设为0 可以在nvidia-smi中查看编号" />
+                                      Text="Specify CUDA Device Number; 0 = Default; Check via nvidia-smi" />
                         <TextBlock Grid.Row="2"
                                    Grid.Column="0"
                                    Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                                   Text="{Binding Status.CudaDeviceId, StringFormat='当前CUDA设备: {0}'}" />
+                                   Text="&apos;Current CUDA Device: {0}&apos;} = {Binding Status.CudaDeviceId, StringFormat=&apos;Current CUDA Device: {0}&apos;}='Current CUDA Device: {0}'}" />
                     </Grid>
                     <!--  Auto Append CUDA Path  -->
                     <Separator Margin="-18,0" BorderThickness="0,1,0,0" />
@@ -257,7 +257,7 @@
                         </Grid.ColumnDefinitions>
                         <ui:TextBlock Grid.Row="0"
                                       FontTypography="Body"
-                                      Text="自动添加CUDA路径" />
+                                      Text="Auto Add CUDA Path" />
                         <ui:ToggleSwitch Grid.Row="0"
                                          Grid.RowSpan="2"
                                          Grid.Column="1"
@@ -265,7 +265,7 @@
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="自动添加系统CUDA环境路径 默认关闭" />
+                                      Text="Auto Add System CUDA Environment Path (Default Off)" />
                     </Grid>
                     <!--  _additionalPath  -->
                     <Separator Margin="-18,0" BorderThickness="0,1,0,0" />
@@ -281,12 +281,12 @@
                         <ui:TextBlock Grid.Row="0"
                                       Grid.Column="0"
                                       FontTypography="Body"
-                                      Text="附加PATH"
+                                      Text="Additional PATH"
                                       TextWrapping="Wrap" />
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="附加path，用;分割。默认为空。可用于附加DLL路径"
+                                      Text="Additional PATH, Semicolon-Separated; Default Empty; Can Be Used for DLL Paths"
                                       TextWrapping="Wrap" />
                         <ui:TextBox Grid.Row="0"
                                     Grid.RowSpan="2"
@@ -299,7 +299,7 @@
                 </StackPanel>
             </ui:CardExpander>
 
-            <!--  TensorRT配置  -->
+            <!--  TensorRT Configuration  -->
             <ui:CardExpander Margin="0,0,0,12"
                              ContentPadding="0"
                              Icon="{ui:SymbolIcon Settings24}"
@@ -317,13 +317,13 @@
                         <ui:TextBlock Grid.Row="0"
                                       Grid.Column="0"
                                       FontTypography="Body"
-                                      Text="TensorRT配置"
+                                      Text="TensorRT Configuration"
                                       TextWrapping="Wrap" />
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                       TextWrapping="Wrap">
-                            修改后需要重启程序生效。
+                            Restart Needed After Edit。
                         </ui:TextBlock>
                     </Grid>
                 </ui:CardExpander.Header>
@@ -342,7 +342,7 @@
                         </Grid.ColumnDefinitions>
                         <ui:TextBlock Grid.Row="0"
                                       FontTypography="Body"
-                                      Text="启用TensorRT缓存" />
+                                      Text="Enable TensorRT Cache" />
                         <ui:ToggleSwitch Grid.Row="0"
                                          Grid.RowSpan="2"
                                          Grid.Column="1"
@@ -350,11 +350,11 @@
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="提升TensorRT模型加载速度 默认开启" />
+                                      Text="Improve TensorRT Model Load Speed; Enabled by Default" />
                         <TextBlock Grid.Row="2"
                                    Grid.Column="0"
                                    Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                                   Text="{Binding Status.EnableCache, StringFormat='缓存状态: {0}'}" />
+                                   Text="&apos;Cache Status: {0}&apos;} = {Binding Status.EnableCache, StringFormat=&apos;Cache Status: {0}&apos;}='Cache Status: {0}'}" />
                     </Grid>
 
                     <!--  Embed Mode  -->
@@ -371,7 +371,7 @@
                         </Grid.ColumnDefinitions>
                         <ui:TextBlock Grid.Row="0"
                                       FontTypography="Body"
-                                      Text="嵌入式引擎缓存" />
+                                      Text="Embedded Engine Cache" />
                         <ui:ToggleSwitch Grid.Row="0"
                                          Grid.RowSpan="2"
                                          Grid.Column="1"
@@ -379,17 +379,17 @@
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="将引擎缓存嵌入模型文件 默认开启" />
+                                      Text="Embed Engine Cache into Model File (Default On)" />
                         <TextBlock Grid.Row="2"
                                    Grid.Column="0"
                                    Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                                   Text="{Binding Status.TrtUseEmbedMode, StringFormat='嵌入模式: {0}'}" />
+                                   Text="&apos;Embed Mode: {0}&apos;} = {Binding Status.TrtUseEmbedMode, StringFormat=&apos;Embed Mode: {0}&apos;}='Embed Mode: {0}'}" />
                     </Grid>
                 </StackPanel>
             </ui:CardExpander>
 
 
-            <!--  OpenVino配置  -->
+            <!--  OpenVino Configuration  -->
             <ui:CardExpander Margin="0,0,0,12"
                              ContentPadding="0"
                              Icon="{ui:SymbolIcon Settings24}"
@@ -407,13 +407,13 @@
                         <ui:TextBlock Grid.Row="0"
                                       Grid.Column="0"
                                       FontTypography="Body"
-                                      Text="OpenVino配置"
+                                      Text="OpenVino Configuration"
                                       TextWrapping="Wrap" />
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
                                       TextWrapping="Wrap">
-                            修改后需要重启程序生效。
+                            Restart Needed After Edit。
                         </ui:TextBlock>
                     </Grid>
                 </ui:CardExpander.Header>
@@ -433,7 +433,7 @@
                         </Grid.ColumnDefinitions>
                         <ui:TextBlock Grid.Row="0"
                                       FontTypography="Body"
-                                      Text="OpenVino 设备参数" />
+                                      Text="OpenVino Device Parameters" />
                         <ui:TextBox Grid.Row="0"
                                     Grid.RowSpan="2"
                                     Grid.Column="1"
@@ -445,12 +445,12 @@
                                       Grid.RowSpan="2"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="从“CPU”、“GPU”、“NPU”、“GPU.x”中选择，其中 x = 0,1,2 等，或者从可用的 HETERO/MULTI/AUTO 选项中选择。默认为 AUTO:GPU,CPU"
+                                      Text="Choose from 0,1,2 or available HETERO/MULTI/AUTO options; default AUTO:GPU,CPU = Choose From CPU, GPU, NPU, GPU.x (x=0,1,2), or HETERO/MULTI/AUTO; Default AUTO:GPU,CPU = Choose from 0,1,2 or available HETERO/MULTI/AUTO options; default AUTO:GPU,CPU"
                                       TextWrapping="Wrap" />
                         <TextBlock Grid.Row="3"
                                    Grid.Column="0"
                                    Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                                   Text="{Binding Status.OpenVinoDevice, StringFormat='当前参数: {0}'}" />
+                                   Text="&apos;Current Parameter: {0}&apos;} = {Binding Status.OpenVinoDevice, StringFormat=&apos;Current Parameter: {0}&apos;}='Current Parameter: {0}'}" />
                     </Grid>
                     <!--  _enableOpenVinoCache  -->
                     <Separator Margin="-18,0" BorderThickness="0,1,0,0" />
@@ -466,7 +466,7 @@
                         </Grid.ColumnDefinitions>
                         <ui:TextBlock Grid.Row="0"
                                       FontTypography="Body"
-                                      Text="是否启用 OpenVINO 缓存(实验性)，默认关闭。" />
+                                      Text="Enable OpenVINO Cache (Experimental, Default Off)" />
                         <ui:ToggleSwitch Grid.Row="0"
                                          Grid.RowSpan="2"
                                          Grid.Column="1"
@@ -474,11 +474,11 @@
                         <ui:TextBlock Grid.Row="1"
                                       Grid.Column="0"
                                       Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                      Text="启用后会在缓存文件夹下生成对应模型缓存，以加快模型载入速度。" />
+                                      Text="Enable Model Cache in Folder to Speed Up Loading" />
                         <TextBlock Grid.Row="2"
                                    Grid.Column="0"
                                    Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}"
-                                   Text="{Binding Status.OpenVinoCache, StringFormat='当前状态: {0}'}" />
+                                   Text="&apos;Current Status: {0}&apos;} = {Binding Status.OpenVinoCache, StringFormat=&apos;Current Status: {0}&apos;}='Current Status: {0}'}" />
                     </Grid>
                 </StackPanel>
             </ui:CardExpander>

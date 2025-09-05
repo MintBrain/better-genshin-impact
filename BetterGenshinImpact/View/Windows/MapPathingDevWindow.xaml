@@ -13,15 +13,15 @@
                  Height="260"
                  mc:Ignorable="d">
     <StackPanel>
-        <ui:TitleBar Title="地图追踪开发者工具">
+        <ui:TitleBar Title="Map TrackingDeveloper Tools">
             <ui:TitleBar.Icon>
                 <ui:ImageIcon Source="pack://application:,,,/Resources/Images/logo.png" />
             </ui:TitleBar.Icon>
         </ui:TitleBar>
 
         <StackPanel Margin="12">
-            <ui:TextBlock Margin="5">(下方地图选择会影响路径录制所在的独立地图)</ui:TextBlock>
-            <ui:TextBlock Margin="5">请选择地图：</ui:TextBlock>
+            <ui:TextBlock Margin="5">(Selecting the map below affects which independent map is used for path recording)</ui:TextBlock>
+            <ui:TextBlock Margin="5">Please select Map:</ui:TextBlock>
             <ComboBox ItemsSource="{Binding MapTypeItems}"
                       DisplayMemberPath="DisplayName"
                       SelectedValuePath="EnumName"
@@ -36,11 +36,11 @@
             </ComboBox>
             <ui:Button Margin="5"
                        Command="{Binding OpenMapViewerCommand}"
-                       Content="查看实时追踪地图" />
+                       Content="View Real-Time Tracking Map" />
 
             <ui:Button Margin="5"
                        Command="{Binding OpenMapEditorCommand}"
-                       Content="录制编辑器" />
+                       Content="Recording Editor" />
         </StackPanel>
     </StackPanel>
 </ui:FluentWindow>

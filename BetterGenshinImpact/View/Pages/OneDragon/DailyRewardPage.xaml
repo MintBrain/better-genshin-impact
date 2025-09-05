@@ -15,6 +15,6 @@
                    FontWeight="Bold"
                    Text="{Binding Title}" />
 
-        <!-- 在这里添加DailyRewardViewModel特定的控件 -->
+        <!-- 在这里AddDailyRewardViewModel特定的控件 -->
     </StackPanel>
 </UserControl>

@@ -9,7 +9,7 @@
                  xmlns:emoji="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf"
                  xmlns:webview="clr-namespace:BetterGenshinImpact.View.Controls.Webview"
                  x:Name="app"
-                 Title="发现新版本"
+                 Title="New Version Found"
                  Width="680"
                  MinHeight="10"
                  SizeToContent="Height"
@@ -50,7 +50,7 @@
                             <ui:TextBlock Grid.Row="0"
                                           Grid.Column="0"
                                           FontTypography="Body"
-                                          Text="开源渠道"
+                                          Text="Open Source Channel"
                                           TextWrapping="Wrap" />
                             <ui:TextBlock Grid.Row="1"
                                           Grid.Column="0"
@@ -71,7 +71,7 @@
                         <ui:Button
                             Appearance="Success"
                             Icon="{ui:SymbolIcon ArrowDownload24}"
-                            Content="立即更新"
+                            Content="Update Now"
                             Command="{Binding UpdateFromGitHostPlatformCommand}" />
                     </StackPanel>
                 </ui:CardControl>
@@ -87,12 +87,12 @@
                             </Grid.RowDefinitions>
                             <emoji:TextBlock Grid.Row="0"
                                              Grid.Column="0"
-                                             Text="Steambird 服务 🆓"
+                                             Text="Steambird Service 🆓"
                                              TextWrapping="Wrap" />
                             <ui:TextBlock Grid.Row="1"
                                           Grid.Column="0"
                                           Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                          Text="普通用户可点此直接更新"
+                                          Text="Normal Users Can Click Here to Update"
                                           TextWrapping="Wrap" />
                         </Grid>
                     </ui:CardControl.Header>
@@ -100,7 +100,7 @@
                         <ui:Button
                             Appearance="Success"
                             Icon="{ui:SymbolIcon ArrowDownload24}"
-                            Content="立即更新"
+                            Content="Update Now"
                             Command="{Binding UpdateFromSteambirdCommand}" />
                     </StackPanel>
                 </ui:CardControl>
@@ -116,12 +116,12 @@
                             </Grid.RowDefinitions>
                             <emoji:TextBlock Grid.Row="0"
                                           Grid.Column="0"
-                                          Text="Mirror酱服务 ⚡"
+                                          Text="Mirror Service ⚡"
                                           TextWrapping="Wrap" />
                             <ui:TextBlock Grid.Row="1"
                                           Grid.Column="0"
                                           Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                          Text="Mirror酱用户可以输入CDK高速更新"
+                                          Text="Mirror Users Can Input CDK for Fast Updates"
                                           TextWrapping="Wrap" />
                         </Grid>
                     </ui:CardControl.Header>
@@ -130,11 +130,11 @@
                             Name="EditCdkButton"
                             Margin="0,0,8,0"
                             Icon="{ui:SymbolIcon TicketDiagonal24}"
-                            Content="修改CDK"
+                            Content="Edit CDK"
                             Command="{Binding EditCdkCommand}" />
                         <ui:Button
                             Icon="{ui:SymbolIcon ArrowDownload24}"
-                            Content="立即更新"
+                            Content="Update Now"
                             Command="{Binding UpdateFromMirrorChyanCommand}" />
                     </StackPanel>
                 </ui:CardControl>
@@ -151,12 +151,12 @@
                             </Grid.RowDefinitions>
                             <emoji:TextBlock Grid.Row="0"
                                              Grid.Column="0"
-                                             Text="Hutao Cloud 胡桃云⚡"
+                                             Text="Hutao Cloud ⚡"
                                              TextWrapping="Wrap" />
                             <ui:TextBlock Grid.Row="1"
                                           Grid.Column="0"
                                           Foreground="{ui:ThemeResource TextFillColorTertiaryBrush}"
-                                          Text="胡桃云CDN用户，可使用 Hutao Cloud CDN 高速更新"
+                                          Text="Hutao Cloud CDN Users Can Use Fast Updates"
                                           TextWrapping="Wrap" />
                         </Grid>
                     </ui:CardControl.Header>
@@ -164,7 +164,7 @@
                         <ui:Button
                             Appearance="Primary"
                             Icon="{ui:SymbolIcon ArrowBounce24}"
-                            Content="唤起胡桃"
+                            Content="Launch Hutao"
                             Command="{Binding OneKeyExecuteCommand}" />
                     </StackPanel>
                 </ui:CardControl>-->
@@ -177,7 +177,7 @@
                            MinWidth="90"
                            Margin="8,0,8,0"
                            Command="{Binding BackgroundUpdateCommand}"
-                           Content="后台更新"
+                           Content="Background Update"
                            Visibility="Collapsed" />
                 <Grid Grid.Column="0">
                     <ui:Button x:Name="OtherUpdateButton"
@@ -186,7 +186,7 @@
                                MinWidth="90"
                                Margin="8,0,8,0"
                                Command="{Binding OtherUpdateCommand}"
-                               Content="手动下载" />
+                               Content="Manual Download" />
                     <!-- 气泡提示 -->
                     <Popup x:Name="OtherUpdateTipPopup"
                             IsOpen="{Binding ShowOtherUpdateTip}"
@@ -209,7 +209,7 @@
                                                        ShadowDepth="2" 
                                                        BlurRadius="8"/>
                                  </Border.Effect>
-                                 <emoji:TextBlock Text="💡 如果上方更新渠道无法正常更新，可以点击此按钮手动下载安装包进行更新"
+                                 <emoji:TextBlock Text="💡 如果上方更新渠道无法正常更新，可以点击此按钮Manual Download安装包进行更新"
                                                   Foreground="#FFE6E6E6"
                                                   TextWrapping="Wrap"
                                                   FontSize="12"/>
@@ -228,18 +228,18 @@
                            Margin="8,0,8,0"
                            Appearance="Success"
                            Command="{Binding UpdateCommand}"
-                           Content="立即更新" />-->
+                           Content="Update Now" />-->
                 <ui:Button Name="IgnoreButton"
                            Grid.Column="2"
                            MinWidth="90"
                            Margin="8,0,8,0"
                            Command="{Binding IgnoreCommand}"
-                           Content="不再提示" />
+                           Content="Do Not Prompt Again" />
                 <ui:Button Grid.Column="3"
                            MinWidth="90"
                            Margin="8,0,8,0"
                            Command="{Binding CancelCommand}"
-                           Content="取消" />
+                           Content="Cancel" />
             </ui:Grid>
         </ui:Grid>
         <ui:TitleBar Title="{Binding Title, ElementName=app}"
